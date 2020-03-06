@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace EncryptingLab_2
 {
-    class OneLetterReplacement : IEncrypt //TODO Вынести алфавиты в общие какие то поля, их просто наследовать
+    class OneLetterReplacement : IEncrypt //TODO Вынести алфавиты в общие какие то поля, их наследовать
     {
         private int lettersCount;
         protected List<int> keys;

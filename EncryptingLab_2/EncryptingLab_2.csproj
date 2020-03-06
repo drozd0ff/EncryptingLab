@@ -43,15 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GasloviyShifr.cs" />
-    <Compile Include="IEncrypt.cs" />
-    <Compile Include="OneLetterReplacement.cs" />
+    <Compile Include="Algorithms\GasloviyShifr.cs" />
+    <Compile Include="Interfaces\IEncrypt.cs" />
+    <Compile Include="Algorithms\OneLetterReplacement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VijeneraShifr.cs" />
+    <Compile Include="Algorithms\VijeneraShifr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

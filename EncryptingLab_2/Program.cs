@@ -12,27 +12,27 @@ namespace EncryptingLab_2
 
 
 
-            //VijeneraShifr.Zavd();
+            VijeneraShifr.Zavd();
 
-            //GasloviyShifr gaslo1 = new GasloviyShifr("Lulu", "slogan");
-            //gaslo1.Encrypt();
-            //gaslo1.Print();
-            //gaslo1.Decrypt();
-            //gaslo1.Print();
+            GasloviyShifr gaslo1 = new GasloviyShifr("Lulu", "slogan");
+            gaslo1.Encrypt();
+            gaslo1.Print();
+            gaslo1.Decrypt();
+            gaslo1.Print();
 
-            //LatinOneLetter latSurname = new LatinOneLetter("Drozdov");
-            //latSurname.Print();
-            //latSurname.Encrypt();
-            //latSurname.Print();
-            //latSurname.Decrypt();
-            //latSurname.Print();
+            LatinOneLetter latSurname = new LatinOneLetter("Drozdov");
+            latSurname.Print();
+            latSurname.Encrypt();
+            latSurname.Print();
+            latSurname.Decrypt();
+            latSurname.Print();
 
-            //CyrillicOneLetter cyrSurname = new CyrillicOneLetter("Дроздов");
-            //cyrSurname.Print();
-            //cyrSurname.Encrypt();
-            //cyrSurname.Print();
-            //cyrSurname.Decrypt();
-            //cyrSurname.Print();
+            CyrillicOneLetter cyrSurname = new CyrillicOneLetter("Дроздов");
+            cyrSurname.Print();
+            cyrSurname.Encrypt();
+            cyrSurname.Print();
+            cyrSurname.Decrypt();
+            cyrSurname.Print();
 
             Console.ReadKey();
         }
