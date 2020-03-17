@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\GasloviyShifr.cs" />
+    <Compile Include="Algorithms\VerticalShift.cs" />
     <Compile Include="Interfaces\IEncrypt.cs" />
     <Compile Include="Algorithms\OneLetterReplacement.cs" />
     <Compile Include="Program.cs" />
