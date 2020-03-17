@@ -11,7 +11,7 @@ namespace EncryptingLab_2.Algorithms
         public string MainString { get; set; }
         private double[] key;
         private List<double> secondList;
-        SortedDictionary<double, string> dic;
+        private SortedDictionary<double, string> dic;
         public VerticalShift(string main, string keyWord)
         {
             if (keyWord.Length >= 100)
@@ -79,7 +79,21 @@ namespace EncryptingLab_2.Algorithms
 
         public void Decrypt()
         {
-            throw new NotImplementedException();
+            ///пройтись по индексам словаря
+            /// первые индексы + вторые индексы + третий и тд
+            List<char> main = new List<char>();
+            //MainString = String.Empty;
+            for (int i = 0; i < Math.Ceiling((double)MainString.Length/key.Length); i++)
+            {
+                //Math.Ceiling();
+                var s = secondList.GetEnumerator();
+                while (s.MoveNext())
+                {
+                    main.Add(dic[s.Current][i]);
+                }
+            }
+
+            MainString = String.Join("", main);
         }
 
         public void Print()

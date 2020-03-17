@@ -8,17 +8,19 @@ namespace EncryptingLab_2
     {
         static void Main(string[] args)
         {
-            
-            
-            
-            
-            
-            
-            //VerticalShift e1 = new VerticalShift("KOZHUKHOVSKY YAROSLAV АLEKSANDROVICH", "FOREVER");
-            //e1.Print();
-            //e1.Shuffort();
-            //e1.Encrypt();
-            //e1.Print();
+
+
+
+
+
+
+            VerticalShift e1 = new VerticalShift("KOZHUKHOVSKY YAROSLAV ALEKSANDROVICH", "FOREVER");
+            e1.Print();
+            e1.Shuffort();
+            e1.Encrypt();
+            e1.Print();
+            e1.Decrypt();
+            e1.Print();
 
             //VijeneraShifr.Zavd();
 
