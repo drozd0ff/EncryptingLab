@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace EncryptingLab_2
 {
-    class OneLetterReplacement : IEncrypt //TODO Вынести алфавиты в общие какие то поля, их наследовать
+    class OneLetterCipher : IEncrypt //TODO Вынести алфавиты в общие какие то поля, их наследовать
     {
         private int lettersCount;
         protected List<int> keys;
@@ -42,7 +42,7 @@ namespace EncryptingLab_2
             }
         }
 
-        public OneLetterReplacement(string main)
+        public OneLetterCipher(string main)
         {
             keys = new List<int>();
             MainString = main;
@@ -91,7 +91,7 @@ namespace EncryptingLab_2
         }            
     }
 
-    class LatinOneLetter : OneLetterReplacement
+    class LatinOneLetter : OneLetterCipher
     {
         public LatinOneLetter(string main) : base(main)
         {
@@ -108,7 +108,7 @@ namespace EncryptingLab_2
         }
     }
 
-    class CyrillicOneLetter : OneLetterReplacement
+    class CyrillicOneLetter : OneLetterCipher
     {
         public CyrillicOneLetter(string main) : base(main)
         {

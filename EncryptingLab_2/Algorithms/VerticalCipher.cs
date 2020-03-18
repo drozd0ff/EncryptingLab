@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EncryptingLab_2.Algorithms
 {
-    class VerticalShift : IEncrypt
+    class VerticalCipher : IEncrypt
     {
         public string MainString { get; set; }
         private double[] key;
         private List<double> secondList;
         private SortedDictionary<double, string> dic;
-        public VerticalShift(string main, string keyWord)
+        public VerticalCipher(string main, string keyWord)
         {
             if (keyWord.Length >= 100)
             {
@@ -82,14 +80,19 @@ namespace EncryptingLab_2.Algorithms
             ///пройтись по индексам словаря
             /// первые индексы + вторые индексы + третий и тд
             List<char> main = new List<char>();
-            //MainString = String.Empty;
-            for (int i = 0; i < Math.Ceiling((double)MainString.Length/key.Length); i++)
+            for (int i = 0; i < key.Length; i++)
             {
-                //Math.Ceiling();
                 var s = secondList.GetEnumerator();
                 while (s.MoveNext())
                 {
-                    main.Add(dic[s.Current][i]);
+                    try
+                    {
+                        main.Add(dic[s.Current][i]);
+                    }
+                    catch (Exception)
+                    {
+
+                    }
                 }
             }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EncryptingLab_2
 {
-    static class VijeneraShifr
+    static class VijeneraCipher
     {
         public static void Zavd()
         {
