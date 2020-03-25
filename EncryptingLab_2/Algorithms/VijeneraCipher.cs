@@ -13,7 +13,7 @@ namespace EncryptingLab_2
             var alphabet = new List<char>(Enumerable.Range(0, 26).Select(x => Convert.ToChar(65 + x)).ToArray());
             alphabet.Add('_');
             //var mainString = "KOZHUKHOVSKY";
-            var mainString = "drpzdov";
+            var mainString = "Drozdov";
             //var key = "BITCOIN";
             var key = "lalalend";
             while (key.Length < mainString.Length)
