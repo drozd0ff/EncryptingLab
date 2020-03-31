@@ -21,33 +21,6 @@ namespace EncryptingLab_2
             //cyrSurname.Decrypt();
             //cyrSurname.Print();
 
-            //GasloviyCipher gaslo1 = new GasloviyCipher("Drozdov", "slogan");
-            //Console.WriteLine("Гасло - slogan");
-            //gaslo1.Print();
-            //gaslo1.Encrypt();
-            //gaslo1.Print();
-            //gaslo1.Decrypt();
-            //gaslo1.Print();
-
-            VijeneraCipher vijener = new VijeneraCipher("DROZDOVDROZDOVDROZDOV", "ARTEM");
-
-
-            //PlayfairCipher playfair = new LatinPlayfair("Drozdov"); //TODO ПЕРЕДЕЛАТЬ ПОД POINT СТРУКТУРУ
-            //playfair.Print();
-            //Console.WriteLine("\n");
-            //playfair.PrintAlphabet();
-            //playfair.Encrypt();
-            //Console.WriteLine("\n");
-            //playfair.Print();
-
-            //VerticalCipher vertical = new VerticalCipher("DROZDOV ARTEM IUREVICH", "BITCOIN");
-            //vertical.Print();
-            //vertical.Shuffort();
-            //vertical.Encrypt();
-            //vertical.Print();
-            //vertical.Decrypt();
-            //vertical.Print();
-
             Console.ReadKey();
         }
     }
