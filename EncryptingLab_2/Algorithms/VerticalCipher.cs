@@ -10,13 +10,13 @@ namespace EncryptingLab_2.Algorithms
         private double[] key;
         private List<double> secondList;
         private SortedDictionary<double, string> dic;
-        public VerticalCipher(string main, string keyWord)
+        public VerticalCipher(string input, string keyWord)
         {
             if (keyWord.Length >= 100)
             {
                 throw new Exception("key word is too long, please make it less than 100 characters");
             }
-            string[] mainStringArray = main.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
+            string[] mainStringArray = input.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
             MainString = String.Join("", mainStringArray);
             dic = new SortedDictionary<double, string>();
             key = keyWord.Select(x => (double)x).ToArray();

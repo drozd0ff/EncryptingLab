@@ -6,14 +6,31 @@ using System.Threading.Tasks;
 
 namespace EncryptingLab_2
 {
-    static class VijeneraCipher
+    class VijeneraCipher : IEncrypt
     {
+        private static readonly char[] latinAlphabet = Enumerable.Range(0, 26).Select(x => Convert.ToChar(65 + x)).ToArray();
+        private string Key { get; }
+        public string MainString { get; set; }
+        public VijeneraCipher(string input, string key)
+        {
+            while (input.Length > key.Length)
+            {
+                for (int i = 0; i < key.Length; i++)
+                {
+                    key += key[i];
+                    if (input.Length <= key.Length)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
         public static void Zavd()
         {
-            var alphabet = new List<char>(Enumerable.Range(0, 26).Select(x => Convert.ToChar(65 + x)).ToArray());
-            alphabet.Add('_');
+            //List<char> alphabet = new List<char>(Enumerable.Range(0, 26).Select(x => Convert.ToChar(65 + x)).ToArray());
             //var mainString = "KOZHUKHOVSKY";
-            var mainString = "drpzdov";
+            var mainString = "Drozdov";
             //var key = "BITCOIN";
             var key = "lalalend";
             while (key.Length < mainString.Length)
@@ -39,10 +56,25 @@ namespace EncryptingLab_2
 
             foreach (var item in res3)
             {
-                mainString += alphabet[item];
+                mainString += latinAlphabet[item];
             }
 
             Console.WriteLine(mainString);
+        }
+
+        public void Encrypt()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Decrypt()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Print()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -10,6 +10,8 @@ namespace EncryptingLab_2
         protected List<int> keys;
         protected char[] alphabet;
 
+        protected IEnumerable<int> numerableLetters;
+
         public string AlphabetName { get; private set; }
 
         public string MainString { get; set; }
@@ -42,13 +44,12 @@ namespace EncryptingLab_2
             }
         }
 
-        public OneLetterCipher(string main)
+        protected OneLetterCipher(string input)
         {
             keys = new List<int>();
-            MainString = main;
+            MainString = input;
         }
 
-        protected IEnumerable<int> numerableLetters;
         public virtual void Encrypt()
         {
             List<int> mySurnameNotEncrypted = new List<int>();
@@ -93,7 +94,7 @@ namespace EncryptingLab_2
 
     class LatinOneLetter : OneLetterCipher
     {
-        public LatinOneLetter(string main) : base(main)
+        public LatinOneLetter(string input) : base(input)
         {
             LettersCount = 26;
             keys.Fill(LettersCount);
@@ -110,7 +111,7 @@ namespace EncryptingLab_2
 
     class CyrillicOneLetter : OneLetterCipher
     {
-        public CyrillicOneLetter(string main) : base(main)
+        public CyrillicOneLetter(string input) : base(input)
         {
             LettersCount = 32;
             keys.Fill(LettersCount);
