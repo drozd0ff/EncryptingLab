@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace EncryptingLab_2.Algorithms
 {
-    class VerticalCipher : IEncrypt
+    public class VerticalCipher : IEncrypt
     {
         public string MainString { get; set; }
         private double[] key;
@@ -17,9 +17,11 @@ namespace EncryptingLab_2.Algorithms
                 throw new Exception("key word is too long, please make it less than 100 characters");
             }
             string[] mainStringArray = input.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
-            MainString = String.Join("", mainStringArray);
+            MainString = String.Join("", mainStringArray).ToUpper();
             dic = new SortedDictionary<double, string>();
             key = keyWord.Select(x => (double)x).ToArray();
+
+            Shuffort();
         }
 
         public void Encrypt()
@@ -51,6 +53,8 @@ namespace EncryptingLab_2.Algorithms
             {
                 MainString += dic[s.Current] + " ";
             }
+
+            MainString = MainString.Trim();
             s.Dispose();
         }
 

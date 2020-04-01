@@ -28,20 +28,22 @@ namespace EncryptingLab_2
             //gasloviy.Decrypt();
             //gasloviy.Print();
 
-            VijeneraCipher vijenera = new VijeneraCipher("DROZDOV", "ARTEM");
-            
+            //VijeneraCipher vijenera = new VijeneraCipher("DROZDOV", "ARTEM");
+            //vijenera.Encrypt();
+            //Console.WriteLine(vijenera.MainString);
+
             //PlayfairCipher playfair = new LatinPlayfair("Drozdov");
             //playfair.PrintAlphabet();
             //playfair.Print();
             //playfair.Encrypt();
             //playfair.Print();
 
-            //VerticalCipher vertical = new VerticalCipher("DROZDOV ARTEM IUREVICH", "BITCOIN");
-            //vertical.Print();
-            //vertical.Encrypt();
-            //vertical.Print();
-            //vertical.Decrypt();
-            //vertical.Print();
+            VerticalCipher vertical = new VerticalCipher("Drozdov Artem IUrevich", "Bitcoin");
+            vertical.Print();
+            vertical.Encrypt();
+            vertical.Print();
+            vertical.Decrypt();
+            vertical.Print();
 
 
             Console.ReadKey();

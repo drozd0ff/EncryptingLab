@@ -46,7 +46,6 @@
     <Compile Include="Algorithms\GasloviyCipher.cs" />
     <Compile Include="Algorithms\PlayfairCipher.cs" />
     <Compile Include="Algorithms\VerticalCipher.cs" />
-    <Compile Include="ForTest.cs" />
     <Compile Include="Interfaces\IEncrypt.cs" />
     <Compile Include="Algorithms\OneLetterCipher.cs" />
     <Compile Include="Program.cs" />
