@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace EncryptingLab_2
 {
@@ -26,45 +27,41 @@ namespace EncryptingLab_2
             }
         }
 
-        public static void Zavd()
-        {
-            //List<char> alphabet = new List<char>(Enumerable.Range(0, 26).Select(x => Convert.ToChar(65 + x)).ToArray());
-            //var mainString = "KOZHUKHOVSKY";
-            var mainString = "Drozdov";
-            //var key = "BITCOIN";
-            var key = "lalalend";
-            while (key.Length < mainString.Length)
-            {
-                key += key;
-            }
-
-            var res = new List<int>(mainString.ToUpper().Select(x => x - 'A'));
-            var res2 = new List<int>(key.ToUpper().Select(x => x - 'A'));
-            var res3 = new List<int>();
-
-            for (int i = 0; i < res.Count(); i++)
-            {
-                var item = res[i] + res2[i];
-                if (item >= 27)
-                {
-                    item %= 27;
-                }
-                res3.Add(item);
-            }
-
-            mainString = String.Empty;
-
-            foreach (var item in res3)
-            {
-                mainString += latinAlphabet[item];
-            }
-
-            Console.WriteLine(mainString);
-        }
-
         public void Encrypt()
         {
-            throw new NotImplementedException();
+            int[] inputNumbers = MainString.ToUpper().Select(x => x - 'A').ToArray();
+            //List<int> inputNumbers = new List<int>(MainString.ToUpper().Select(x => x - 'A'));
+            //List<int> keyNumbers = new List<int>(Key.ToUpper().Select(x => x - 'A'));
+            int[] keyNumbers = Key.ToUpper().Select(x => x - 'A').ToArray();
+            //List<int> encryptedMessageNumbers = new List<int>();
+            int[] encryptedMessageNumbers = new int[inputNumbers.Length];
+
+            for (int i = 0; i < inputNumbers.Length; i++)
+            {
+                int item = inputNumbers[i] + keyNumbers[i];
+                if (item >= 26)
+                {
+                    item %= 26;
+                }
+                //encryptedMessageNumbers.Add(item);
+                encryptedMessageNumbers[i] = item;
+            }
+
+            MainString = String.Concat(encryptedMessageNumbers.Select(x => latinAlphabet[x]));
+        }
+
+        public static void Zavd()
+        {
+            
+
+            //MainString = String.Empty;
+
+            //foreach (var item in res3)
+            //{
+            //    mainString += latinAlphabet[item];
+            //}
+
+            //Console.WriteLine(mainString);
         }
 
         public void Decrypt()
@@ -74,7 +71,7 @@ namespace EncryptingLab_2
 
         public void Print()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(MainString);
         }
     }
 }
