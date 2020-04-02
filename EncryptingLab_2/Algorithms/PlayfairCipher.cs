@@ -2,7 +2,7 @@
 
 namespace EncryptingLab_2.Algorithms
 {
-    class PlayfairCipher : IEncrypt
+    public class PlayfairCipher : IEncrypt
     {
         protected ValueTuple<int, int> alphabetDimensionRowsCols;
         protected string alphabet;
@@ -160,7 +160,7 @@ namespace EncryptingLab_2.Algorithms
         }
     }
 
-    class LatinPlayfair : PlayfairCipher
+    public class LatinPlayfair : PlayfairCipher
     {
         public LatinPlayfair(string input) : base(input)
         {

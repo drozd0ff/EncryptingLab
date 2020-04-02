@@ -21,16 +21,16 @@ namespace EncryptingLab_2
             //cyrSurname.Decrypt();
             //cyrSurname.Print();
 
-            //GasloviyCipher gasloviy = new GasloviyCipher("Drozdov", "gaslo");
-            //gasloviy.Print();
-            //gasloviy.Encrypt();
-            //gasloviy.Print();
-            //gasloviy.Decrypt();
-            //gasloviy.Print();
+            GasloviyCipher gasloviy = new GasloviyCipher("Drozdov", "slogan");
+            gasloviy.Print();
+            gasloviy.Encrypt();
+            gasloviy.Print();
+            gasloviy.Decrypt();
+            gasloviy.Print();
 
             //VijeneraCipher vijenera = new VijeneraCipher("DROZDOV", "ARTEM");
             //vijenera.Encrypt();
-            //Console.WriteLine(vijenera.MainString);
+            //vijenera.Print();
 
             //PlayfairCipher playfair = new LatinPlayfair("Drozdov");
             //playfair.PrintAlphabet();
@@ -38,12 +38,12 @@ namespace EncryptingLab_2
             //playfair.Encrypt();
             //playfair.Print();
 
-            VerticalCipher vertical = new VerticalCipher("Drozdov Artem IUrevich", "Bitcoin");
-            vertical.Print();
-            vertical.Encrypt();
-            vertical.Print();
-            vertical.Decrypt();
-            vertical.Print();
+            //VerticalCipher vertical = new VerticalCipher("Drozdov Artem IUrevich", "Bitcoin");
+            //vertical.Print();
+            //vertical.Encrypt();
+            //vertical.Print();
+            //vertical.Decrypt();
+            //vertical.Print();
 
 
             Console.ReadKey();
